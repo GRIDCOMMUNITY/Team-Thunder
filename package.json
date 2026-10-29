@@ -1,0 +1,9 @@
+{
+  "name": "team-thunder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pathfinding Visualizer - Hack Day Haldia x GRID community starter",
+  "scripts": {
+    "start": "npx --yes serve ."
+  }
+}
