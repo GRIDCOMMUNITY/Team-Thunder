@@ -1,29 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pathfinding Visualizer</title>
-  <style>
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; background: #fafafa; color: #1f2933; }
-    header, main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem 0; }
-    h1 { margin: 0; font-size: 1.75rem; }
-    .tag { margin: .25rem 0 0; color: #52606d; }
-    .start { border: 1px solid #cbd2d9; border-radius: 6px; padding: 1rem 1.25rem; background: #fff; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Pathfinding Visualizer</h1>
-    <p class="tag">Watch BFS, DFS, Dijkstra and A-star search a grid.</p>
-  </header>
-  <main id="app">
-    <div class="start">
-      <p id="status">Starting...</p>
-      <p>Replace this with your UI. The core tasks are listed in README.md.</p>
-    </div>
-  </main>
-  <script src="script.js" defer></script>
+  <h1>Pathfinding Visualizer</h1>
+
+  <div id="controls">
+    <select id="algo">
+      <option value="bfs">BFS</option>
+      <option value="dfs">DFS</option>
+      <option value="dijkstra">Dijkstra</option>
+      <option value="astar">A*</option>
+    </select>
+    <button id="run">Run</button>
+    <button id="maze">Generate Maze</button>
+    <button id="clearPath">Clear Path</button>
+    <button id="reset">Reset Board</button>
+    <select id="size">
+      <option value="15,31">Small</option>
+      <option value="21,41" selected>Medium</option>
+      <option value="31,61">Large</option>
+    </select>
+    <label><input type="checkbox" id="weightMode"> Weight mode (cost 5)</label>
+    <label>Speed <input type="range" id="speed" min="1" max="100" value="80"></label>
+  </div>
+
+  <div id="stats">Pick an algorithm and press Run.</div>
+  <div id="grid"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
