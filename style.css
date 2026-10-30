@@ -1,0 +1,13 @@
+body { font-family: sans-serif; margin: 0; padding: 12px; }
+h1 { margin: 0 0 10px 0; font-size: 24px; }
+#controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 8px; }
+button, select { padding: 6px 10px; font-size: 14px; }
+#stats { margin-bottom: 8px; font-weight: bold; }
+#grid { width: 100%; max-width: 1100px; touch-action: none; user-select: none; }
+.cell { aspect-ratio: 1; border: 1px solid #e0e0e0; box-sizing: border-box; }
+.weight  { background: #b388ff; }
+.wall    { background: #222; }
+.visited { background: #74b9ff; }
+.path    { background: #f1c40f; }
+.start   { background: #2ecc71 !important; }
+.end     { background: #e74c3c !important; }
